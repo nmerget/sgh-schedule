@@ -1,0 +1,18 @@
+---
+version: 2
+updates:
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    pull-request-branch-name:
+      separator: '-'
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    pull-request-branch-name:
+      separator: '-'
+    ignore:
+      # disable playwright auto update for now, because we need to update them manually anyway for github action
+      - dependency-name: "@playwright/test"
