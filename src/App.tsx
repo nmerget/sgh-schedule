@@ -32,20 +32,46 @@ const App = () => {
   return (
     <div className="flex flex-col p-4">
       <header className="grid grid-cols-8">
-        <h1 className="text-dark-green col-span-6 text-4xl font-bold">
-          {matchType === MatchType.HOME
-            ? "Unsere Heimspiele"
-            : matchType === MatchType.GUEST
-              ? "Unsere Auswärtsspiele"
-              : "Alle Spiele"}
-        </h1>
+        <div className="flex flex-col col-span-6 gap-2">
+          <h1 className="text-dark-green text-4xl font-bold">
+            {matchType === MatchType.HOME
+              ? "Unsere Heimspiele"
+              : matchType === MatchType.GUEST
+                ? "Unsere Auswärtsspiele"
+                : "Alle Spiele"}
+          </h1>
+          {matchType === MatchType.ALL && (
+            <div className="flex gap-2">
+              <a
+                className="text-light-blue underline"
+                href="/sgh-schedule?matchType=home"
+              >
+                Unsere Heimspiele
+              </a>
+              <a
+                className="text-light-blue underline"
+                href="/sgh-schedule?matchType=guest"
+              >
+                Unsere Auswärtsspiele
+              </a>
+            </div>
+          )}
+          {matchDate === MatchDate.ALL && (
+            <a
+              className="text-light-blue underline"
+              href="/sgh-schedule?matchDate=current"
+            >
+              Aktuelle Woche
+            </a>
+          )}
+        </div>
         <img
-          className="col-span-2"
+          className="col-span-2 w-full max-w-40 ml-auto"
           alt="SGH Logo"
           src="/sgh-schedule/app-icon.png"
         />
       </header>
-      <main className="flex flex-col gap-4 px-2">
+      <main className="flex flex-col gap-4">
         {data
           .filter((group) => {
             let isValid = true;
@@ -75,36 +101,38 @@ const App = () => {
                 {day}
                 {date}
               </h2>
-              {matches
-                ?.filter((match) => {
-                  let isValid = true;
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
+                {matches
+                  ?.filter((match) => {
+                    let isValid = true;
 
-                  if (isValid && matchType === MatchType.HOME) {
-                    isValid = !!match.isHomeMatch;
-                  }
+                    if (isValid && matchType === MatchType.HOME) {
+                      isValid = !!match.isHomeMatch;
+                    }
 
-                  if (isValid && matchType === MatchType.GUEST) {
-                    isValid = !match.isHomeMatch;
-                  }
+                    if (isValid && matchType === MatchType.GUEST) {
+                      isValid = !match.isHomeMatch;
+                    }
 
-                  return isValid;
-                })
-                .map(({ time, home, guest, league }) => (
-                  <section
-                    key={`${day}${date}${time}${home}${guest}`}
-                    className="bg-light-green p-2 rounded"
-                  >
-                    <div className="flex justify-between">
-                      <span className="text-sm font-bold">
-                        {getAge(league).toUpperCase()}
-                      </span>
-                      <span className="text-sm font-bold">{time} Uhr</span>
-                    </div>
-                    <p className="text-lg">
-                      {home} vs. {guest}
-                    </p>
-                  </section>
-                ))}
+                    return isValid;
+                  })
+                  .map(({ time, home, guest, league }) => (
+                    <section
+                      key={`${day}${date}${time}${home}${guest}`}
+                      className="bg-light-green p-2 rounded"
+                    >
+                      <div className="flex justify-between">
+                        <span className="text-sm font-bold">
+                          {getAge(league).toUpperCase()}
+                        </span>
+                        <span className="text-sm font-bold">{time} Uhr</span>
+                      </div>
+                      <p className="text-lg">
+                        {home} vs. {guest}
+                      </p>
+                    </section>
+                  ))}
+              </div>
             </div>
           ))}
       </main>

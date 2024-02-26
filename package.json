@@ -5,18 +5,19 @@
   "private": true,
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "vite --open",
     "crawlee": "tsx src/utils/main.ts",
-    "generate:readme": "npx marked -o readme.html -i README.md",
+    "dev": "vite --open",
     "generate:manifest-icons": "pwa-asset-generator public/app-icon.png public/icons --favicon -i ./index.html",
+    "generate:readme": "npx marked -o readme.html -i README.md",
     "lint": "eslint src --ext ts,tsx",
+    "prebuild": "npm run crawlee",
     "prepare": "husky",
-    "start": "vite",
     "preview": "vite preview",
+    "start": "vite",
     "test": "playwright test -c playwright.config.ts",
     "test:regenerate": "playwright test -c playwright.config.ts --update-snapshots",
-    "weekly": "playwright test -c playwright.weekly.config.ts --project=\"Mobile Chrome\" -u",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "weekly": "playwright test -c playwright.weekly.config.ts --project=\"Mobile Chrome\" -u"
   },
   "dependencies": {
     "react": "^18.2.0",
