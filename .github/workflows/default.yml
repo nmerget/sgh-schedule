@@ -6,11 +6,11 @@ on:
     branches:
       - "main"
   schedule:
-    - "0 10 * * MON"
+    - cron: "0 10 * * MON"
   workflow_dispatch:
     inputs:
       test:
-        description: 'Test weekly'
+        description: "Test weekly"
         required: false
         type: boolean
 
