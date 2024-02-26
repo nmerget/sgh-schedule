@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy
+    name: Send Mail
     runs-on: ubuntu-latest
     steps:
       - name: ⏬ Checkout repo
@@ -18,8 +18,15 @@ jobs:
           name: matches
           path: weekly/__snapshots__
 
+      - name: 🛒 Dump GitHub context
+        env:
+          GITHUB_EVENT: ${{ toJson(github.event) }}
+        run: |
+          echo "$GITHUB_EVENT"
+
       - name: 📧 Send mail
         uses: dawidd6/action-send-mail@v3
+        if: github.event.schedule == '0 10 * * MON' || github.event.inputs.test == true
         with:
           server_address: smtp.gmail.com
           server_port: 465

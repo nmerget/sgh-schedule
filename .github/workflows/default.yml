@@ -39,6 +39,5 @@ jobs:
     needs: [e2e, build, lint]
 
   send-mail:
-    if: github.event.schedule == '0 10 * * MON' || github.event.inputs.test == true
     uses: ./.github/workflows/03-send-mail.yml
     needs: [e2e]
