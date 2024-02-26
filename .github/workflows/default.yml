@@ -37,3 +37,8 @@ jobs:
     if: github.ref_name == 'main'
     uses: ./.github/workflows/03-deploy-gh-pages.yml
     needs: [e2e, build, lint]
+
+  send-mail:
+    if: github.event.schedule == '0 10 * * MON' || github.event.inputs.test == true
+    uses: ./.github/workflows/03-send-mail.yml
+    needs: [e2e]

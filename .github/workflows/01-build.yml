@@ -19,7 +19,7 @@ jobs:
         run: npm run build
 
       - name: ⏫ Upload build
-        uses: nmerget/upload-gzip-artifact@main
+        uses: actions/upload-artifact@v4
         with:
           name: frontend-build
           path: dist

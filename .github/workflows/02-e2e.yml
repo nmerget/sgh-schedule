@@ -32,7 +32,7 @@ jobs:
           npm run weekly
 
       - name: ⏫ Upload weekly matches
-        uses: nmerget/upload-gzip-artifact@main
+        uses: actions/upload-artifact@v4
         with:
           name: matches
           path: weekly/__snapshots__
