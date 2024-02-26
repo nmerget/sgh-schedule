@@ -5,13 +5,18 @@ on:
   push:
     branches:
       - "main"
+  schedule:
+    - "0 10 * * MON"
+  workflow_dispatch:
+    inputs:
+      test:
+        description: 'Test weekly'
+        required: false
+        type: boolean
 
 jobs:
   init:
     uses: ./.github/workflows/00-init.yml
-
-  scan-secrets:
-    uses: ./.github/workflows/00-scan-secrets.yml
 
   build:
     uses: ./.github/workflows/01-build.yml
