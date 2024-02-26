@@ -1,14 +1,14 @@
 import { ManifestOptions } from "vite-plugin-pwa";
 
 const manifest: Partial<ManifestOptions> = {
-  name: "React in GitHub template",
-  short_name: "RiGHt",
-  description: "TODO: Change me :)",
-  start_url: "/right/",
+  name: "SGH Schedule",
+  short_name: "sgh-schedule",
+  description: "Simple app to see current sport matches",
+  start_url: "/sgh-schedule/",
   display: "standalone",
   background_color: "#ffffff",
-  theme_color: "#000000",
-  lang: "en",
+  theme_color: "#017731",
+  lang: "de",
   scope: "/",
   icons: [
     {

@@ -21,7 +21,7 @@ git clone git@github.com:nmerget/right.git my-awesome-project
 
 ### Rename the default repo
 
-`node scripts/rename.js -n \"My Awesome Project\" -sn my-awesome-project`
+`node scripts/rename.js -n "My Awesome Project" -sn my-awesome-project`
 
 ### Add a custom app icon
 

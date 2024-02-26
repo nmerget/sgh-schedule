@@ -5,13 +5,18 @@ on:
   push:
     branches:
       - "main"
+  schedule:
+    - cron: "0 10 * * MON"
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "Test weekly"
+        required: false
+        type: boolean
 
 jobs:
   init:
     uses: ./.github/workflows/00-init.yml
-
-  scan-secrets:
-    uses: ./.github/workflows/00-scan-secrets.yml
 
   build:
     uses: ./.github/workflows/01-build.yml
@@ -32,3 +37,8 @@ jobs:
     if: github.ref_name == 'main'
     uses: ./.github/workflows/03-deploy-gh-pages.yml
     needs: [e2e, build, lint]
+
+  send-mail:
+    if: github.event.schedule == '0 10 * * MON' || github.event.inputs.test == true
+    uses: ./.github/workflows/03-send-mail.yml
+    needs: [e2e]

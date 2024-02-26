@@ -1,0 +1,33 @@
+---
+name: Send mail with all matches
+
+on:
+  workflow_call:
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⏬ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: ⏬ Download matches
+        uses: actions/download-artifact@v4
+        with:
+          name: matches
+          path: weekly/__snapshots__
+
+      - name: 📧 Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: Github Actions job result
+          to: nicolas.merget@gmail.com
+          from: SGH Scheduler
+          body: Build job of ${{github.repository}} completed successfully!
+          attachments: ./weekly/__snapshots__/*.png

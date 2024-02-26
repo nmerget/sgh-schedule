@@ -1,10 +1,9 @@
 ---
-repo:
-  - "*"
+🚢📀cicd:
+  - changed-files:
+      - any-glob-to-any-file: [".github/*", ".github/**/*"]
 
-cicd:
-  - .github/*
-  - .github/**/*
+👩‍🔬🎭e2e:
+  - changed-files:
+      - any-glob-to-any-file: ["e2e/**/*"]
 
-e2e:
-  - e2e/**/*

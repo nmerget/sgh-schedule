@@ -1,0 +1,212 @@
+[
+  {
+    "day": "Mi.",
+    "date": "28.02.2024",
+    "matches": [
+      {
+        "time": "19:00",
+        "building": "17173",
+        "number": "59",
+        "league": "WJB-BOL",
+        "home": "TSG Offenbach/Bürgel",
+        "guest": "SGH",
+        "isHomeMatch": false
+      }
+    ]
+  },
+  {
+    "day": "Sa.",
+    "date": "02.03.2024",
+    "matches": [
+      {
+        "time": "12:00",
+        "building": "19140",
+        "number": "82",
+        "league": "WJB-BOL",
+        "home": "TV Niedernberg",
+        "guest": "SGH",
+        "isHomeMatch": false
+      }
+    ]
+  },
+  {
+    "day": "So.",
+    "date": "03.03.2024",
+    "matches": [
+      {
+        "time": "13:00",
+        "building": "19151",
+        "number": "51",
+        "league": "WJA-BOL",
+        "home": "JSG Wallstadt",
+        "guest": "SGH",
+        "isHomeMatch": false
+      },
+      {
+        "time": "13:15",
+        "building": "17145",
+        "number": "76",
+        "league": "MJC-BKL",
+        "home": "JSG  HOH  II",
+        "guest": "HSG Dietesh./Mühlh.",
+        "isHomeMatch": true
+      },
+      {
+        "time": "14:00",
+        "building": "17124",
+        "number": "37",
+        "league": "WJD-BOL",
+        "home": "JSGwD Preagberg Klein/Auheim",
+        "guest": "JSG  HOH",
+        "isHomeMatch": false
+      },
+      {
+        "time": "15:00",
+        "building": "17145",
+        "number": "117",
+        "league": "MJB-BOL",
+        "home": "JSG  HOH",
+        "guest": "SG Hainburg",
+        "isHomeMatch": true
+      },
+      {
+        "time": "16:00",
+        "building": "17140",
+        "number": "77",
+        "league": "MJA-BOL",
+        "home": "HSG Isenburg/Zeppelinh.",
+        "guest": "SGH",
+        "isHomeMatch": false
+      },
+      {
+        "time": "16:45",
+        "building": "17169",
+        "number": "42",
+        "league": "MJC-BOL",
+        "home": "JSG  HOH",
+        "guest": "HSG Maintal",
+        "isHomeMatch": true
+      }
+    ]
+  },
+  {
+    "day": "Sa.",
+    "date": "09.03.2024",
+    "matches": [
+      {
+        "time": "14:00",
+        "building": "17128",
+        "number": "82",
+        "league": "MJC-BKL",
+        "home": "HSG Hanau  II",
+        "guest": "JSG  HOH  II",
+        "isHomeMatch": false
+      },
+      {
+        "time": "14:50",
+        "building": "17142",
+        "number": "1",
+        "league": "GJF",
+        "home": "HSV Nidderau",
+        "guest": "SGH II",
+        "isHomeMatch": false
+      },
+      {
+        "time": "15:30",
+        "building": "17142",
+        "number": "2",
+        "league": "GJF",
+        "home": "SGH II",
+        "guest": "TGS Bieber II",
+        "isHomeMatch": true
+      }
+    ]
+  },
+  {
+    "day": "So.",
+    "date": "10.03.2024",
+    "matches": [
+      {
+        "time": "10:00",
+        "building": "17125",
+        "number": "1",
+        "league": "GJF",
+        "home": "HSG Hanau",
+        "guest": "SGH",
+        "isHomeMatch": false
+      },
+      {
+        "time": "10:30",
+        "building": "17153",
+        "number": "54",
+        "league": "MJE-M",
+        "home": "SGH",
+        "guest": "TGS Seligenstadt",
+        "isHomeMatch": true
+      },
+      {
+        "time": "12:00",
+        "building": "17153",
+        "number": "56",
+        "league": "WJA-BOL",
+        "home": "SGH",
+        "guest": "JSG Umstadt/Habitzheim",
+        "isHomeMatch": true
+      },
+      {
+        "time": "13:15",
+        "building": "17145",
+        "number": "41",
+        "league": "WJD-BOL",
+        "home": "JSG  HOH",
+        "guest": "TSG Offenbach/Bürgel",
+        "isHomeMatch": true
+      },
+      {
+        "time": "14:00",
+        "building": "17163",
+        "number": "71",
+        "league": "MJB-BOL",
+        "home": "JSGmB Flieden/Kinzigtal",
+        "guest": "JSG  HOH",
+        "isHomeMatch": false
+      },
+      {
+        "time": "14:00",
+        "building": "17153",
+        "number": "82",
+        "league": "MJA-BOL",
+        "home": "SGH",
+        "guest": "HSG Hanau  II",
+        "isHomeMatch": true
+      },
+      {
+        "time": "14:15",
+        "building": "17108",
+        "number": "54",
+        "league": "MJE-M",
+        "home": "HSG Dietzenbach",
+        "guest": "SGH  II",
+        "isHomeMatch": false
+      },
+      {
+        "time": "16:00",
+        "building": "17153",
+        "number": "112",
+        "league": "F-BLA",
+        "home": "SGH",
+        "guest": "TGS Seligenstadt",
+        "isHomeMatch": true
+      },
+      {
+        "time": "18:00",
+        "building": "17153",
+        "number": "112",
+        "league": "M-BLB",
+        "home": "SGH",
+        "guest": "HSG Dreieich II",
+        "isHomeMatch": true
+      }
+    ]
+  }
+]
