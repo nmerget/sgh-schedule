@@ -118,7 +118,7 @@
         "league": "GJF",
         "home": "SGH II",
         "guest": "TGS Bieber II",
-        "isHomeMatch": true
+        "isHomeMatch": false
       }
     ]
   },

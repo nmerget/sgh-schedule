@@ -38,15 +38,21 @@ const crawler = new PlaywrightCrawler({
             });
           }
 
+          const trimmedBuilding = building?.trim() || "";
+
           if (groups.length > 0) {
             groups.at(-1)?.matches.push({
               time: time?.replace("v", "").trim().substring(0, 5),
-              building: building?.trim(),
+              building: trimmedBuilding,
               number: number?.trim(),
               league: league?.trim(),
               home: cleanTeamName(home?.trim()),
               guest: cleanTeamName(guest?.trim()),
-              isHomeMatch: home?.toLowerCase().includes("hainhausen"),
+              isHomeMatch:
+                trimmedBuilding === "17153" ||
+                trimmedBuilding === "17169" ||
+                trimmedBuilding === "17143" ||
+                trimmedBuilding === "17145",
             });
           }
         }
