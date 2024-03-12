@@ -41,3 +41,4 @@ jobs:
   send-mail:
     uses: ./.github/workflows/03-send-mail.yml
     needs: [e2e]
+    secrets: inherit
