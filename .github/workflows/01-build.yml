@@ -17,7 +17,7 @@ jobs:
 
       - name: 🔨 Build
         run: |
-          npx playwright install --with-deps
+          npx playwright install --with-deps chromium
           npm run build
 
       - name: ⏫ Upload build
