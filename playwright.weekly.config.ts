@@ -3,8 +3,9 @@ import { defineConfig, devices } from "@playwright/test";
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  snapshotPathTemplate: "{snapshotDir}/{testName}{ext}",
-  snapshotDir: "./weekly/__snapshots__",
+  snapshotPathTemplate:
+    '{snapshotDir}/{testName}{ext}',
+  snapshotDir: './weekly/__snapshots__',
   testDir: "./weekly",
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -30,8 +31,8 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      name: "Mobile Chrome",
+      use: { ...devices["Pixel 5"] },
     },
   ],
 
