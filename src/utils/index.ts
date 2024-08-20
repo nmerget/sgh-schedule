@@ -44,9 +44,20 @@ export const getDateFromString = (date: string): Date | undefined => {
   return now;
 };
 
+const veJugend = "VE Jugend";
+const ve = "Vereins-Event";
+
 export const getAge = (league?: string): string => {
   if (!league) {
     return "";
+  }
+
+  if (league.startsWith(veJugend)) {
+    return league.replace(veJugend,"Testpiel Gemischt");
+  }
+
+  if (league.startsWith(ve)) {
+    return league.replace(ve,"Testpiel");
   }
 
   const [age] = league.split("-");
