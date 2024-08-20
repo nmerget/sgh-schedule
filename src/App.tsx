@@ -98,8 +98,7 @@ const App = () => {
           .map(({ day, date, matches }) => (
             <div key={date} className="flex-col flex gap-2">
               <h2 className="text-dark-green font-bold">
-                {day}
-                {date}
+                {day} {date}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
                 {matches

@@ -1,8 +1,6 @@
-import { defineConfig, devices } from "@playwright/test";
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
-export default defineConfig({
+import { devices, PlaywrightTestConfig } from "@playwright/test";
+
+const config: PlaywrightTestConfig = {
   snapshotPathTemplate:
     "{snapshotDir}/{testFileDir}/{projectName}/{arg}/{testName}{ext}",
   snapshotDir: "./__snapshots__",
@@ -22,7 +20,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: "http://127.0.0.1:5173/right",
+    baseURL: "http://localhost:5173/sgh-schedule",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
@@ -39,7 +37,9 @@ export default defineConfig({
   /* Run your local dev server before starting the tests */
   webServer: {
     command: "npm run dev",
-    url: "http://127.0.0.1:5173",
+    port: 5173,
     reuseExistingServer: !process.env.CI,
   },
-});
+};
+
+export default config;
