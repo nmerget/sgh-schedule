@@ -34,7 +34,7 @@
     "autoprefixer": "^10.4.20",
     "commander": "^12.1.0",
     "crawlee": "^3.11.3",
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.12",
     "husky": "9.1.6",
