@@ -1,7 +1,7 @@
-import { MatchDate, MatchGroupType, MatchType } from "./data";
+import { MatchDate, MatchDay, MatchGroupType, MatchType } from "./data";
 
 import live from "./data/live.json";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { getAge, getDateFromString, getWeekDay } from "./utils";
 
 const data: MatchGroupType[] = live as unknown as MatchGroupType[];
@@ -9,6 +9,8 @@ const data: MatchGroupType[] = live as unknown as MatchGroupType[];
 const App = () => {
   const [matchType, setMatchType] = useState<MatchType>(MatchType.ALL);
   const [matchDate, setMatchDate] = useState<MatchDate>(MatchDate.ALL);
+  const [matchDay, setMatchDay] = useState<MatchDay | null>();
+  const [site, setSite] = useState<number | null>();
 
   const [weekStart, setWeekStart] = useState<Date>();
   const [weekEnd, setWeekEnd] = useState<Date>();
@@ -19,6 +21,8 @@ const App = () => {
       const params = new URLSearchParams(search);
       setMatchType(params.get("matchType") as MatchType);
       setMatchDate(params.get("matchDate") as MatchDate);
+      setMatchDay(params.get("matchDay") as MatchDay);
+      setSite(Number(params.get("site")));
     }
   }, []);
 
@@ -32,13 +36,19 @@ const App = () => {
   return (
     <div className="flex flex-col p-4">
       <header className="grid grid-cols-8">
-        <div className="flex flex-col col-span-6 gap-2">
-          <h1 className="text-dark-green text-4xl font-bold">
-            {matchType === MatchType.HOME
-              ? "Unsere Heimspiele"
-              : matchType === MatchType.GUEST
-                ? "Unsere Auswärtsspiele"
-                : "Alle Spiele"}
+        <div className="flex flex-col col-span-6 gap-2 self-center md:self-auto">
+          <h1 className="text-dark-green text-4xl md:text-5xl font-bold">
+            {matchType === MatchType.HOME ? (
+              <Fragment>
+                Unsere <br /> Heimspiele
+              </Fragment>
+            ) : matchType === MatchType.GUEST ? (
+              <Fragment>
+                Unsere <br /> Auswärtsspiele
+              </Fragment>
+            ) : (
+              "Alle Spiele"
+            )}
           </h1>
           {matchType === MatchType.ALL && (
             <div className="flex gap-2">
@@ -66,7 +76,7 @@ const App = () => {
           )}
         </div>
         <img
-          className="col-span-2 w-full max-w-40 ml-auto"
+          className="col-span-2 w-full max-w-24 md:max-w-40 ml-auto"
           alt="SGH Logo"
           src="/sgh-schedule/app-icon.png"
         />
@@ -83,6 +93,14 @@ const App = () => {
             ) {
               const date = getDateFromString(group.date);
               isValid = date ? date >= weekStart && date <= weekEnd : false;
+            }
+
+            if (isValid && matchDay) {
+              if (matchDay === MatchDay.SA) {
+                isValid = group.day === "Sa.";
+              } else if (matchDay === MatchDay.SO) {
+                isValid = group.day === "So.";
+              }
             }
 
             if (isValid && matchType === MatchType.HOME) {
@@ -115,6 +133,15 @@ const App = () => {
 
                     return isValid;
                   })
+                  .filter((_, index) => {
+                    if (site && site > 0) {
+                      const min = (site - 1) * 5;
+                      const max = site * 5;
+                      return index >= min && index < max;
+                    }
+
+                    return true;
+                  })
                   .map(({ time, home, guest, league }) => (
                     <section
                       key={`${day}${date}${time}${home}${guest}`}
@@ -127,7 +154,7 @@ const App = () => {
                         <span className="text-sm font-bold">{time} Uhr</span>
                       </div>
                       <p className="text-lg">
-                        {home} vs. {guest}
+                        {home} <i>vs.</i> {guest}
                       </p>
                     </section>
                   ))}

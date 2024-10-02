@@ -9,7 +9,7 @@ const weeklyConfig: PlaywrightTestConfig = {
   projects: [
     {
       name: "Mobile Chrome",
-      use: { ...devices["Pixel 5"] },
+      use: { ...devices["Pixel 5"], viewport: { width: 512, height: 512 } },
     },
   ],
 };

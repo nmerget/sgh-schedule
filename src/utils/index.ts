@@ -1,4 +1,4 @@
-export const cleanTeamName = (team?: string) => {
+export const cleanTeamName = (team?: string | null) => {
   if (!team) {
     return "";
   }
@@ -6,8 +6,15 @@ export const cleanTeamName = (team?: string) => {
   let cleanTeam = team
     .replace(/-/g, "/")
     .replace("Hainhausen/Obertshausen/Heusenstamm", "HOH")
+    .replace("Hainhausen/Obertsh./Heusenst.", "HOH")
     .replace("SG Hainhausen", "SGH")
-    .replace("a.K.", "");
+    .replace("(a.K.)", "")
+    .replace("a.K.", "")
+    .replace("()", "")
+    .replace("  ", " ")
+    .replace("  ", " ")
+    .replace("II II", "II")
+    .replace("III III", "III");
 
   if (cleanTeam.includes("HOH")) {
     const splitTeam = cleanTeam.split(" ");
@@ -53,11 +60,11 @@ export const getAge = (league?: string): string => {
   }
 
   if (league.startsWith(veJugend)) {
-    return league.replace(veJugend,"Testpiel Gemischt");
+    return league.replace(veJugend, "Testpiel Gemischt");
   }
 
   if (league.startsWith(ve)) {
-    return league.replace(ve,"Testpiel");
+    return league.replace(ve, "Testpiel");
   }
 
   const [age] = league.split("-");
