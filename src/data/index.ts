@@ -23,3 +23,7 @@ export enum MatchDate {
   "ALL" = "all",
   "CURRENT" = "current",
 }
+export enum MatchDay {
+  "SA" = "sa",
+  "SO" = "so",
+}
