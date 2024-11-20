@@ -25,7 +25,7 @@ jobs:
           echo "$GITHUB_EVENT"
 
       - name: 📧 Send mail
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v4
         if: github.event.schedule == '0 10 * * MON' || github.event.inputs.test == 'true'
         with:
           server_address: smtp.gmail.com
