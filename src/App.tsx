@@ -2,7 +2,7 @@ import { MatchDate, MatchDay, MatchGroupType, MatchType } from "./data";
 
 import live from "./data/live.json";
 import { Fragment, useEffect, useState } from "react";
-import { getAge, getDateFromString, getWeekDay } from "./utils";
+import { getAge, getBuilding, getDateFromString, getWeekDay } from "./utils";
 
 const data: MatchGroupType[] = live as unknown as MatchGroupType[];
 
@@ -142,10 +142,10 @@ const App = () => {
 
                     return true;
                   })
-                  .map(({ time, home, guest, league }) => (
+                  .map(({ time, home, guest, league, building }) => (
                     <section
                       key={`${day}${date}${time}${home}${guest}`}
-                      className="bg-light-green p-2 rounded"
+                      className="bg-light-green p-2 rounded-sm flex flex-col"
                     >
                       <div className="flex justify-between">
                         <span className="text-sm font-bold">
@@ -155,6 +155,9 @@ const App = () => {
                       </div>
                       <p className="text-lg">
                         {home} <i>vs.</i> {guest}
+                      </p>
+                      <p className="flex justify-end text-sm">
+                        <i>{getBuilding(building)}</i>
                       </p>
                     </section>
                   ))}

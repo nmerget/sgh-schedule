@@ -3,10 +3,9 @@ export const cleanTeamName = (team?: string | null) => {
     return "";
   }
 
-  let cleanTeam = team
+  return team
     .replace(/-/g, "/")
-    .replace("Hainhausen/Obertshausen/Heusenstamm", "HOH")
-    .replace("Hainhausen/Obertsh./Heusenst.", "HOH")
+    .replace("Hainhausen/Dietzenbach", "Hain./Diet.")
     .replace("SG Hainhausen", "SGH")
     .replace("(a.K.)", "")
     .replace("a.K.", "")
@@ -15,14 +14,6 @@ export const cleanTeamName = (team?: string | null) => {
     .replace("  ", " ")
     .replace("II II", "II")
     .replace("III III", "III");
-
-  if (cleanTeam.includes("HOH")) {
-    const splitTeam = cleanTeam.split(" ");
-    splitTeam[1] = "";
-    cleanTeam = splitTeam.join(" ");
-  }
-
-  return cleanTeam;
 };
 
 export const getWeekDay = (day: number): Date => {
@@ -53,6 +44,26 @@ export const getDateFromString = (date: string): Date | undefined => {
 
 const veJugend = "VE Jugend";
 const ve = "Vereins-Event";
+
+export const getBuilding = (building?: string): string => {
+  if (!building) {
+    return "";
+  }
+
+  if (building === "17153") {
+    return "Sporthalle Hainhausen";
+  }
+
+  if (building === "17108") {
+    return "Philipp-Fenn-Halle";
+  }
+
+  if (building === "17107") {
+    return "Ernst-Reuter-Schule";
+  }
+
+  return building;
+};
 
 export const getAge = (league?: string): string => {
   if (!league) {
