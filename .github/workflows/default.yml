@@ -1,4 +1,4 @@
-name: Default Pipeline
+name: Default Pipelinex
 
 on:
   pull_request:
