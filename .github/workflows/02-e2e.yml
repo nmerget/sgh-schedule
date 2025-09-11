@@ -8,16 +8,14 @@ jobs:
     name: Playwright E2E
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/playwright:v1.38.1-focal
+      image: mcr.microsoft.com/playwright:v1.55.0
+      options: --user 1001
     steps:
       - name: ⏬ Checkout repo
         uses: actions/checkout@v4
 
       - name: 🔄 Init Cache
         uses: nmerget/npm-cache-action@main
-
-      - name: 📲 Install esbuild (binary workaround)
-        run: npm i -D esbuild-linux-64
 
       - name: 👩‍🔬 Test with Playwright 🎭
         env:
