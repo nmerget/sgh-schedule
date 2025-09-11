@@ -1,1 +1,206 @@
-[{"day":"Sa.","date":"05.10.2024","matches":[{"time":"10:00","building":"17138","number":"1","league":"GJF","home":"HSG Dietesh./Mühlh. II","guest":"SGH","isHomeMatch":false},{"time":"10:45","building":"17138","number":"2","league":"GJF","home":"SGH","guest":"TGS Bieber","isHomeMatch":false},{"time":"13:00","building":"17153","number":"1","league":"GJF","home":"SGH II","guest":"OFC Kickers","isHomeMatch":true},{"time":"14:00","building":"17169","number":"10","league":"MJE-M","home":"JSGmE","guest":"HSG Dietesh./Mühlh.","isHomeMatch":true},{"time":"14:30","building":"17153","number":"3","league":"GJF","home":"HSG Isenburg/Zeppelinh. II","guest":"SGH II","isHomeMatch":true},{"time":"15:30","building":"17169","number":"11","league":"WJD-BOL","home":"JSGwD","guest":"TSG Offenbach/Bürgel","isHomeMatch":true},{"time":"17:00","building":"17169","number":"12","league":"MJD-BOL","home":"JSGmD","guest":"HSG Hanau","isHomeMatch":true},{"time":"17:15","building":"17153","number":"12","league":"WJC-BKL","home":"SGH II","guest":"JSGwC Kinzigtal/Flieden","isHomeMatch":true},{"time":"18:00","building":"17138","number":"24","league":"MJB-BKL","home":"HSG Dietesh./Mühlh.","guest":"JSGmB HOH","isHomeMatch":false},{"time":"19:00","building":"17153","number":"15","league":"F-BL","home":"SGH II","guest":"HSG Preagberg   II","isHomeMatch":true}]},{"day":"So.","date":"06.10.2024","matches":[{"time":"10:30","building":"17118","number":"24","league":"MJC-BKL","home":"SGH II","guest":"HSG Isenburg/Zeppelinh.","isHomeMatch":false},{"time":"12:00","building":"17131","number":"20","league":"WJA-BOL","home":"JSG Buchberg","guest":"SGH","isHomeMatch":false},{"time":"12:30","building":"17145","number":"12","league":"WJE-M","home":"JSGwE","guest":"HSG Maintal  II","isHomeMatch":true},{"time":"12:30","building":"17118","number":"9","league":"MJC-BOL","home":"SGH","guest":"HSG Dietzenbach","isHomeMatch":false},{"time":"14:00","building":"17153","number":"16","league":"WJC-RL","home":"SGH","guest":"JSG Umstadt/Habitzheim","isHomeMatch":true},{"time":"16:00","building":"17153","number":"15","league":"F-BL","home":"SGH","guest":"HSG Maintal","isHomeMatch":true},{"time":"16:00","building":"17142","number":"10","league":"MJA-BOL","home":"HSV Nidderau","guest":"SGH","isHomeMatch":false},{"time":"18:00","building":"17153","number":"21","league":"M-BL","home":"SGH","guest":"HSG Kinzigtal","isHomeMatch":true}]},{"day":"So.","date":"13.10.2024","matches":[{"time":"12:00","building":"17153","number":"19","league":"F-BL","home":"SGH II","guest":"HSG Kinzigtal","isHomeMatch":true},{"time":"14:00","building":"17153","number":"27","league":"M-2.BKL","home":"SGH II","guest":"HSV Nidderau II","isHomeMatch":true},{"time":"16:00","building":"17153","number":"19","league":"F-BL","home":"SGH","guest":"TG Hanau","isHomeMatch":true},{"time":"18:00","building":"17153","number":"27","league":"M-BL","home":"SGH","guest":"TGS Seligenstadt II","isHomeMatch":true}]}]
+[
+  {
+    "day": "Sa.",
+    "date": "13.09.2025",
+    "matches": [
+      {
+        "time": "13:30",
+        "building": "17151",
+        "number": "1",
+        "league": "MJB-BKL",
+        "home": "TGS Niederrodenbach II",
+        "guest": "JSGmB Hain./Diet. II",
+        "isHomeMatch": false
+      },
+      {
+        "time": "13:30",
+        "building": "17153",
+        "number": "1",
+        "league": "GJF",
+        "home": "HSG Dietesh./Mühlh. II",
+        "guest": "SGH",
+        "isHomeMatch": true
+      },
+      {
+        "time": "15:00",
+        "building": "17153",
+        "number": "3",
+        "league": "GJF",
+        "home": "SGH",
+        "guest": "SG Hainburg",
+        "isHomeMatch": true
+      },
+      {
+        "time": "16:00",
+        "building": "17153",
+        "number": "3",
+        "league": "WJC-BKL",
+        "home": "SGH",
+        "guest": "TGS Seligenstadt",
+        "isHomeMatch": true
+      },
+      {
+        "time": "16:00",
+        "building": "17104",
+        "number": "4",
+        "league": "F-BL",
+        "home": "SG Bruchköbel II",
+        "guest": "SGH II",
+        "isHomeMatch": false
+      },
+      {
+        "time": "17:30",
+        "building": "17138",
+        "number": "4",
+        "league": "M-BL",
+        "home": "HSG Dietesh./Mühlh.",
+        "guest": "SGH",
+        "isHomeMatch": false
+      },
+      {
+        "time": "17:45",
+        "building": "17153",
+        "number": "7",
+        "league": "WJB-ROL",
+        "home": "SGH",
+        "guest": "JSG Wallstadt",
+        "isHomeMatch": true
+      },
+      {
+        "time": "19:00",
+        "building": "17140",
+        "number": "1",
+        "league": "M-2.BKL",
+        "home": "HSG Isenburg/Zeppelinh. II",
+        "guest": "SGH II",
+        "isHomeMatch": false
+      },
+      {
+        "time": "19:30",
+        "building": "17138",
+        "number": "4",
+        "league": "F-BOL",
+        "home": "HSG Dietesh./Mühlh.",
+        "guest": "SGH",
+        "isHomeMatch": false
+      }
+    ]
+  },
+  {
+    "day": "So.",
+    "date": "14.09.2025",
+    "matches": [
+      {
+        "time": "10:00",
+        "building": "17104",
+        "number": "3",
+        "league": "MJD-BOL",
+        "home": "SG Bruchköbel",
+        "guest": "SGH",
+        "isHomeMatch": false
+      },
+      {
+        "time": "11:30",
+        "building": "17126",
+        "number": "12",
+        "league": "WJD-BKL",
+        "home": "HSG Preagberg",
+        "guest": "JSGwD Hain./Diet.",
+        "isHomeMatch": false
+      },
+      {
+        "time": "14:05",
+        "building": "17140",
+        "number": "1",
+        "league": "MJC-BKL",
+        "home": "HSG Isenburg/Zeppelinh.",
+        "guest": "JSGmC Hain./Diet.",
+        "isHomeMatch": false
+      }
+    ]
+  },
+  {
+    "day": "Sa.",
+    "date": "20.09.2025",
+    "matches": [
+      {
+        "time": "12:00",
+        "building": "17116",
+        "number": "2",
+        "league": "MJB-BOL",
+        "home": "TV Gelnhausen",
+        "guest": "JSGmB Hain./Diet.",
+        "isHomeMatch": false
+      },
+      {
+        "time": "16:15",
+        "building": "17116",
+        "number": "7",
+        "league": "MJD-BOL",
+        "home": "TV Gelnhausen",
+        "guest": "SGH",
+        "isHomeMatch": false
+      }
+    ]
+  },
+  {
+    "day": "So.",
+    "date": "21.09.2025",
+    "matches": [
+      {
+        "time": "12:45",
+        "building": "17108",
+        "number": "1",
+        "league": "WJE-M",
+        "home": "JSGwE Hain./Diet.",
+        "guest": "HSG OberBieberStamm",
+        "isHomeMatch": true
+      },
+      {
+        "time": "14:00",
+        "building": "17153",
+        "number": "10",
+        "league": "F-BL",
+        "home": "SGH II",
+        "guest": "SV Erlensee",
+        "isHomeMatch": true
+      },
+      {
+        "time": "15:00",
+        "building": "17166",
+        "number": "8",
+        "league": "WJC-BKL",
+        "home": "JSGwC Kinzigtal/Flieden",
+        "guest": "SGH",
+        "isHomeMatch": false
+      },
+      {
+        "time": "15:30",
+        "building": "17108",
+        "number": "7",
+        "league": "MJB-BKL",
+        "home": "JSGmB Hain./Diet. II",
+        "guest": "HSG Preagberg",
+        "isHomeMatch": true
+      },
+      {
+        "time": "16:00",
+        "building": "17153",
+        "number": "10",
+        "league": "F-BOL",
+        "home": "SGH",
+        "guest": "HSG Isenburg/Zeppelinh.",
+        "isHomeMatch": true
+      },
+      {
+        "time": "18:00",
+        "building": "17153",
+        "number": "10",
+        "league": "M-BL",
+        "home": "SGH",
+        "guest": "HSG Dreieich",
+        "isHomeMatch": true
+      }
+    ]
+  }
+]

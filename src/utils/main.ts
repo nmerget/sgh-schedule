@@ -41,7 +41,10 @@ const crawler = new PlaywrightCrawler({
           const trimmedBuilding = building?.trim() || "";
 
           if (groups.length > 0) {
-            if (home?.toLowerCase() !== "spielfrei") {
+            if (
+              home?.toLowerCase().trim() !== "spielfrei" &&
+              guest?.toLowerCase().trim() !== "spielfrei"
+            ) {
               groups.at(-1)?.matches.push({
                 time: time?.replace("v", "").trim().substring(0, 5),
                 building: trimmedBuilding,
@@ -51,9 +54,8 @@ const crawler = new PlaywrightCrawler({
                 guest: cleanTeamName(guest).trim(),
                 isHomeMatch:
                   trimmedBuilding === "17153" ||
-                  trimmedBuilding === "17169" ||
-                  trimmedBuilding === "17143" ||
-                  trimmedBuilding === "17145",
+                  trimmedBuilding === "17107" ||
+                  trimmedBuilding === "17108",
               });
             }
           }
