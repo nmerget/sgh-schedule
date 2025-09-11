@@ -2,43 +2,31 @@ name: Default Pipelinex
 
 on:
   pull_request:
-  push:
-    branches:
-      - "main"
-  schedule:
-    - cron: "0 10 * * MON"
-  workflow_dispatch:
-    inputs:
-      test:
-        description: "Test weekly"
-        required: false
-        type: boolean
-
 jobs:
-  init:
+  initx:
     uses: ./.github/workflows/00-init.yml
 
-  build:
+  buildx:
     uses: ./.github/workflows/01-build.yml
-    needs: [init]
+    needs: [initx]
     secrets: inherit
 
-  lint:
+  lintx:
     uses: ./.github/workflows/01-lint.yml
-    needs: [init]
+    needs: [initx]
     secrets: inherit
 
-  e2e:
+  e2ex:
     uses: ./.github/workflows/02-e2e.yml
-    needs: [init]
+    needs: [initx]
     secrets: inherit
 
   deploy:
     if: github.ref_name == 'main'
     uses: ./.github/workflows/03-deploy-gh-pages.yml
-    needs: [e2e, build, lint]
+    needs: [e2ex, buildx, lintx]
 
   send-mail:
     uses: ./.github/workflows/03-send-mail.yml
-    needs: [e2e]
+    needs: [e2ex]
     secrets: inherit
