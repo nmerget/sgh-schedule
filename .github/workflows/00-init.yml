@@ -15,4 +15,4 @@ jobs:
       - name: 🔄 Init Cache
         uses: nmerget/npm-cache-action@main
         with:
-          nodeVersion: '22'
+          nodeVersion: "22"
