@@ -20,14 +20,14 @@
     "weekly": "playwright test -c playwright.weekly.config.ts --project=\"Mobile Chrome\" -u"
   },
   "dependencies": {
-    "react": "19.1.1",
+    "react": "19.2.0",
     "react-dom": "19.1.1"
   },
   "devDependencies": {
     "@playwright/test": "1.55.0",
     "@tailwindcss/postcss": "4.1.13",
     "@types/node": "24.6.2",
-    "@types/react": "19.1.16",
+    "@types/react": "19.2.0",
     "@types/react-dom": "19.1.9",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
