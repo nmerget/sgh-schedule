@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - "main"
-  schedule:
-    - cron: "0 10 * * MON"
   workflow_dispatch:
     inputs:
       test:
@@ -37,8 +35,3 @@ jobs:
     if: github.ref_name == 'main'
     uses: ./.github/workflows/03-deploy-gh-pages.yml
     needs: [e2e, build, lint]
-
-  send-mail:
-    uses: ./.github/workflows/03-send-mail.yml
-    needs: [e2e]
-    secrets: inherit
