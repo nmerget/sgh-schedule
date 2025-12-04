@@ -20,7 +20,7 @@
     "weekly": "playwright test -c playwright.weekly.config.ts --project=\"Mobile Chrome\" -u"
   },
   "dependencies": {
-    "react": "19.2.0",
+    "react": "19.2.1",
     "react-dom": "19.2.0"
   },
   "devDependencies": {
