@@ -43,7 +43,7 @@
     "prettier-plugin-pkg": "0.21.2",
     "prettier-plugin-sh": "0.18.0",
     "pwa-asset-generator": "8.1.2",
-    "replace-in-file": "8.3.0",
+    "replace-in-file": "8.4.0",
     "tailwindcss": "4.1.17",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
